@@ -36,15 +36,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //app.use(cookieParser('9919114819-9773636695-9839353083'));
-app.use(session({
-  name: 'session-id',
-  secret: '9919114819-9773636695-9839353083',
-  saveUninitialized: false,
-  resave: false,
-  store: new FileStore()
-}))
 app.use(passport.initialize());
-app.use(passport.session());
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
