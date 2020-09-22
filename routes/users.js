@@ -70,7 +70,8 @@ router.get('/logout', (req, res, next) => {
   }
 });
 
-router.get('/facebook/token', passport.authenticate('facebook-token'), (req, res) => {
+router.get('/facebook/token', 
+passport.authenticate('facebook-token'), (req, res) => {
   if (req.user) {
     var token = authenticate.getToken({_id: req.user._id});
     res.statusCode = 200;
