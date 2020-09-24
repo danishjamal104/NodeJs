@@ -24,9 +24,9 @@ const Dishes = require('./models/dishes');
 //const url = config.mongoUrl;
 //const connect = mongoose.connect(url);
 
-connect.then((db)=>{
-  console.log("Connected correctly to server");
-}, (err)=>{ console.log(err); });
+// connect.then((db)=>{
+//   console.log("Connected correctly to server");
+// }, (err)=>{ console.log(err); });
 
 var app = express();
 
