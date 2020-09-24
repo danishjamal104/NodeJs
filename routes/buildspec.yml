@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12  
+    commands:
+      - echo Install Phase
+      - npm install
+      - pip install --upgrade awscli
+  pre_build:
+    commands:
+      - echo Prebuild phase
+  build:
+    commands:
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo Build completed on `date`
